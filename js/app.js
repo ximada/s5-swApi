@@ -19,7 +19,7 @@ fetch("https://swapi.co/api/films/")
 const getInfoFilms = films => {
     let outPut = ('');
     films.forEach((item,index) => {
-        console.log(item);
+        //console.log(item);
         
         let titleFilm = item.title;
         
@@ -42,10 +42,35 @@ const getInfoFilms = films => {
                             <h4>Date: ${dateFilm}</h4>
                             <h5>Episode: ${episodeFilm}</h5>
                             <p>Summary: ${summaryFilm}</p>
+                            <button type="button" class="btn btn-dark">Characters</button>
                             </div>`
 
-       filmSection.innerHTML= outPut;             
+       filmSection.innerHTML= outPut; 
+       
+       
         
     });
 
+    
 }
+
+fetch("https://swapi.co/api/people/")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (dataPeople) {
+        console.log('Request succesful', dataPeople);
+        const people = dataPeople.results;
+        //console.log(people);
+        getDataPeople(people);
+
+
+    })
+    .catch(function (error) {
+        console.log('Request failed', error)
+    });
+ const getDataPeople = people => {
+     people.forEach(items =>{
+         console.log(items);
+     })
+ }
