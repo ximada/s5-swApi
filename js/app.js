@@ -1,6 +1,4 @@
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myLink').trigger('focus')
-})
+
 
 let filmSection = document.getElementById('films-container');
 let containerModal = document.getElementById('container-modal');
@@ -68,10 +66,6 @@ const getInfoFilms = films => {
 
     
 }
-
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myLink').trigger('focus')
-})
 
 fetch("https://swapi.co/api/people/")
     .then(function (response) {
