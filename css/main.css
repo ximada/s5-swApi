@@ -1,3 +1,26 @@
-#films-container{
+body {
+   background-image: url(../assets/images/galaxia.jpg);
+background-repeat: no-repeat;
+background-size:cover ;
+background-position: center;
+}
+.modal-content{
+    background-color: rgba(6, 3, 20, 0.5);
+
+}
+.style-card span {
+    color: blanchedalmond;
+}
+
+.style-card{
+    background-color: rgba(29, 29, 29, 0.315);
+    border-color:  rgba(226, 207, 30, .2);
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+.characters-modal{
+    display: inline-block;
+    margin: 5px;
     
 }
