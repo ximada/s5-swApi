@@ -14,6 +14,7 @@ fetch("https://swapi.co/api/films/")
 .then(function(data){
     console.log('Request succesful', data);
     const films = data.results;
+    console.log(films)
     getInfoFilms(films);
 
 })
@@ -24,7 +25,7 @@ fetch("https://swapi.co/api/films/")
 const getInfoFilms = films => {
     let outPut = ('');
     films.forEach((item,index) => {
-        console.log(item);
+       //console.log(item);
         
         let titleFilm = item.title;
         
@@ -35,8 +36,12 @@ const getInfoFilms = films => {
         let directorFilm = item.director;
         
         let summaryFilm = item.opening_crawl;
-        let urlFilm = item.url;
-        //console.log(urlFilm);
+        let urlCharacter = item.characters[0];
+
+        let urlCharacter1 = item.characters[1];
+        console.log(urlCharacter1)
+        let urlCharacter2 = item.characters[2];
+
         let arrayFilms = ['./assets/images/episodeIV.jpg', './assets/images/episodeII.jpg', './assets/images/episodeI.jpg', './assets/images/episodeIII.jpg', './assets/images/episodeVI.jpg', './assets/images/episodeV.jpg', './assets/images/episodeVII.jpg']
         
         let imageFilms = arrayFilms[index];
@@ -54,9 +59,10 @@ const getInfoFilms = films => {
                     <br>
                     <span>Episode: ${episodeFilm}</span>
                     <br>
-                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style = "background-color:#FDE71F;border-color:#FDE71F; color:#000;">${urlFilm}</button > 
+                    <a class="" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter}</a> 
+                    <a class="" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter1}</a>
                 
-                    
+        
                 </div>`
             
 
@@ -69,9 +75,7 @@ const getInfoFilms = films => {
     
 }
 
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myLink').trigger('focus')
-})
+
 
 fetch("https://swapi.co/api/people/")
     .then(function (response) {
@@ -91,11 +95,15 @@ fetch("https://swapi.co/api/people/")
  const getDataPeople = people => {
      let outPutModal =('');
      people.forEach((items,index) =>{
-         //console.log(items);
+         console.log(items);
          let nameCharacter = items.name;
-         let eyeColors = items.eye_color; 
+         let eyeColors = items.eye_color;
+         let hairColor = items.hair_color;
+         let massCharacter =items.mass;
+         let skinColor = items.skin_color;
+
          
-         console.log(nameCharacter);
+         console.log(skinColor);
          let arrayCharacters = ['./assets/images/luke.jpg', './assets/images/c-3po.jpg', './assets/images/r2b2.jpg', './assets/images/dark.jpg', './assets/images/leia.jpg', './assets/images/owen.jpg', './assets/images/beru.jpg', './assets/images/r5-d4.jpg', './assets/images/Biggs.jpg', './assets/images/Obi-Wan.jpg']
 
          let imageCharacters = arrayCharacters[index];
@@ -105,7 +113,13 @@ fetch("https://swapi.co/api/people/")
                         <br>
                         <span>Name:  ${nameCharacter}</span>
                         <br>
+                        <span>Mass: ${massCharacter}</span>
+                        <br>
+                        <span>Hair Color: ${hairColor}</span>
+                        <br> 
                         <span>Eye Color: ${eyeColors}</span> 
+                        <br>
+                        <span>Sking Color: ${skinColor}</span> 
                     </div>`
 
          containerModal.innerHTML = outPutModal; 
