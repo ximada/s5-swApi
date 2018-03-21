@@ -2,6 +2,17 @@
 
 let filmSection = document.getElementById('films-container');
 let containerModal = document.getElementById('container-modal');
+
+
+// comentario
+
+
+
+
+
+
+
+
  
  
 
@@ -10,9 +21,9 @@ fetch("https://swapi.co/api/films/")
     return response.json();
 })
 .then(function(data){
-    console.log('Request succesful', data);
+    //console.log('Request succesful', data);
     const films = data.results;
-    console.log(films)
+    //console.log(films)
     getInfoFilms(films);
 
 })
@@ -78,7 +89,7 @@ fetch("https://swapi.co/api/people/")
         return response.json();
     })
     .then(function (dataPeople) {
-        console.log('Request succesful', dataPeople);
+       // console.log('Request succesful', dataPeople);
         const people = dataPeople.results;
         //console.log(people);
         getDataPeople(people);
