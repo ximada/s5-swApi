@@ -6,16 +6,6 @@ let containerModal = document.getElementById('container-modal');
 
 // comentario
 
-
-
-
-
-
-
-
- 
- 
-
 fetch("https://swapi.co/api/films/")
 .then(function(response){
     return response.json();

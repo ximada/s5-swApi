@@ -1,5 +1,5 @@
 body {
-   background-image: url(../assets/images/galaxia.jpg);
+   background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/source.gif);
 background-repeat: no-repeat;
 background-size:cover ;
 background-position: center;
@@ -14,7 +14,7 @@ background-position: center;
 
 .style-card{
     background-color: rgba(29, 29, 29, 0.315);
-    border-color:  rgba(226, 207, 30, .2);
+    border-color:  rgba(211, 192, 20, 0.2);
     display: inline-block;
     margin: 10px;
     padding: 10px;
