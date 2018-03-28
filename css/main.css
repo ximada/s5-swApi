@@ -5,8 +5,10 @@ background-size:cover ;
 background-position: center;
 }
 .modal-content{
-    background-color: rgba(6, 3, 20, 0.5);
-
+    background-image:url(https://media.giphy.com/media/qz4S6gklkPA9W/giphy.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
 }
 .style-card span {
     color: blanchedalmond;
@@ -14,13 +16,16 @@ background-position: center;
 
 .style-card{
     background-color: rgba(29, 29, 29, 0.315);
-    border-color:  rgba(211, 192, 20, 0.2);
+    border-color:  rgba(245, 221, 7, 0.904);
     display: inline-block;
     margin: 10px;
     padding: 10px;
 }
+
 .characters-modal{
+    background-color: rgba(6, 3, 20, 0.5);
     display: inline-block;
+    color: blanchedalmond;
     margin: 5px;
     
 }
