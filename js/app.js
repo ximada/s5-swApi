@@ -38,7 +38,7 @@ const getInfoFilms = films => {
         let urlCharacter = item.characters[0];
 
         let urlCharacter1 = item.characters[1];
-        console.log(urlCharacter1)
+        // console.log(urlCharacter1)
         let urlCharacter2 = item.characters[2];
 
         let arrayFilms = ['./assets/images/episodeIV.jpg', './assets/images/episodeII.jpg', './assets/images/episodeI.jpg', './assets/images/episodeIII.jpg', './assets/images/episodeVI.jpg', './assets/images/episodeV.jpg', './assets/images/episodeVII.jpg']
@@ -58,8 +58,8 @@ const getInfoFilms = films => {
                     <br>
                     <span>Episode: ${episodeFilm}</span>
                     <br>
-                    <a class="" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter}</a> 
-                    <a class="" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter1}</a>
+                    <a class="" data-url="${urlCharacter}" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter}</a> 
+                    <a class="" data-url="${urlCharacter2}" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter1}</a>
                 
         
                 </div>`
@@ -92,7 +92,7 @@ fetch("https://swapi.co/api/people/")
  const getDataPeople = people => {
      let outPutModal =('');
      people.forEach((items,index) =>{
-         console.log(items);
+        //  console.log(items);
          let nameCharacter = items.name;
          let eyeColors = items.eye_color;
          let hairColor = items.hair_color;
@@ -100,7 +100,7 @@ fetch("https://swapi.co/api/people/")
          let skinColor = items.skin_color;
 
          
-         console.log(skinColor);
+        //  console.log(skinColor);
          let arrayCharacters = ['./assets/images/luke.jpg', './assets/images/c-3po.jpg', './assets/images/r2b2.jpg', './assets/images/dark.jpg', './assets/images/leia.jpg', './assets/images/owen.jpg', './assets/images/beru.jpg', './assets/images/r5-d4.jpg', './assets/images/Biggs.jpg', './assets/images/Obi-Wan.jpg']
 
          let imageCharacters = arrayCharacters[index];
