@@ -45,7 +45,7 @@ const getInfoFilms = films => {
                     <br>
                     <span>Episode: ${episodeFilm}</span>
                     <br>
-                    <a class="" data-url="${urlCharacter}" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter}</a> 
+                    <a class="" data-url="${urlCharacter}" data-toggle="modal" data-target="#myModal" style = "color:#fff;">Characters</a> 
                     <a class="" data-url="${urlCharacter2}" data-toggle="modal" data-target="#myModal" style = "color:#fff;">${urlCharacter1}</a>
                 </div>`
 
