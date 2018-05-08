@@ -34,7 +34,7 @@ const getInfoFilms = films => {
         let arrayFilms = ['./assets/images/episodeIV.jpg', './assets/images/episodeII.jpg', './assets/images/episodeI.jpg', './assets/images/episodeIII.jpg', './assets/images/episodeVI.jpg', './assets/images/episodeV.jpg', './assets/images/episodeVII.jpg'];
         let imageFilms = arrayFilms[index];
         //creando  la plantilla  para  mostrar en la pagina
-        outPut += `<div class='card style-card text-center col-sm-12' style="width: 18rem;">    
+        outPut += `<div class='card style-card text-center col-lg-3 col-sm-12 col-xs-8' style="width: 18rem;">    
                     <img src= ${imageFilms}>
                     <br>
                     <span>Title: ${titleFilm}</span>
